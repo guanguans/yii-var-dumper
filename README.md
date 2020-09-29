@@ -1,14 +1,15 @@
 # yii-var-dumper
 
-> Bringing the [symfony/var-dumper](https://symfony.com/components/VarDumper) to Yii.
+![usage](./doc/usage.gif)
 
 ![CI](https://github.com/guanguans/yii-var-dumper/workflows/CI/badge.svg)
-![Static analysis](https://github.com/guanguans/yii-var-dumper/workflows/Static%20analysis/badge.svg)
 [![Build Status](https://travis-ci.org/guanguans/yii-var-dumper.svg?branch=master)](https://travis-ci.org/guanguans/yii-var-dumper)
 [![StyleCI](https://github.styleci.io/repos/299001049/shield?branch=master)](https://github.styleci.io/repos/299001049?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/guanguans/yii-var-dumper/v)](//packagist.org/packages/guanguans/yii-var-dumper)
 [![Total Downloads](https://poser.pugx.org/guanguans/yii-var-dumper/downloads)](//packagist.org/packages/guanguans/yii-var-dumper)
 [![License](https://poser.pugx.org/guanguans/yii-var-dumper/license)](//packagist.org/packages/guanguans/yii-var-dumper)
+
+> Bringing the [symfony/var-dumper](https://symfony.com/components/VarDumper) to Yii.
 
 ## Requirement
 
@@ -43,6 +44,19 @@ config file `config/main.php` add:
 ```
 
 ## Usage
+
+### Run `dumper/server`
+
+``` bash
+php yii dumper/server
+```
+
+### Dump your variable
+
+``` php
+<?php
+dump($yourVariate);
+```
 
 ## Testing
 
