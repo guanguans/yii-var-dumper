@@ -66,8 +66,8 @@ $ composer test
 
 ## Related Links
 
-* [https://github.com/beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server), [beyondcode](https://github.com/beyondcode)
-* [https://github.com/symfony/var-dumper](https://github.com/symfony/var-dumper), [symfony](https://github.com/symfony)
+* [https://github.com/symfony/var-dumper](https://github.com/symfony/var-dumper), by [symfony](https://github.com/symfony)
+* [https://github.com/beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server), by [beyondcode](https://github.com/beyondcode)
 
 ## License
 
