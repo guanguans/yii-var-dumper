@@ -33,7 +33,7 @@ class Module extends \yii\base\Module
     {
         parent::init();
 
-        Yii::setAlias('@Guanguans/YiiVarDumper', __DIR__);
+        require __DIR__.'/bootstrap.php';
 
         if (Yii::$app instanceof Application) {
             $this->controllerNamespace = 'Guanguans\YiiVarDumper\commands';
