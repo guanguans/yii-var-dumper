@@ -25,7 +25,7 @@ class Module extends \yii\base\Module
 
     public $defaultRoute = 'web'; // 设置默认控制器
 
-    public $dumpServerHost = 'tcp://127.0.0.1:9913';
+    public $host = 'tcp://127.0.0.1:9913';
 
     public $controllerNamespace = 'Guanguans\YiiVarDumper\controllers';
 
@@ -39,7 +39,7 @@ class Module extends \yii\base\Module
             $this->controllerNamespace = 'Guanguans\YiiVarDumper\commands';
         }
 
-        $connection = new Connection($this->dumpServerHost, [
+        $connection = new Connection($this->host, [
             'request' => new RequestContextProvider(Yii::$app->request),
             'source' => new SourceContextProvider('utf-8', Yii::$app->getBasePath()),
         ]);

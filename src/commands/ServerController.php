@@ -56,7 +56,7 @@ class ServerController extends Controller
         $errorIo = $io->getErrorStyle();
         $errorIo->title('Yii Var Dump Server');
 
-        $server = new DumpServer(Yii::$app->controller->module->dumpServerHost);
+        $server = new DumpServer(Yii::$app->controller->module->host);
         $server->start();
         $errorIo->success(sprintf('Server listening on %s', $server->getHost()));
         $errorIo->comment('Quit the server with CONTROL-C.');
