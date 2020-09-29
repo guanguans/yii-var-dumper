@@ -18,7 +18,7 @@
 ## Installation
 
 ``` bash
-$ composer require guanguans/yii-var-dumper -v
+$ composer require guanguans/yii-var-dumper --dev -v
 ```
 
 ## Configuration
@@ -48,7 +48,7 @@ config file `config/main.php` add:
 ### Run `dumper/server`
 
 ``` bash
-php yii dumper/server
+$ php yii dumper/server
 ```
 
 ### Dump your variable
