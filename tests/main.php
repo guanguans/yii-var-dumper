@@ -11,10 +11,11 @@
 $config = [
     'id' => 'yii-var-dumper',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['var-dumper'],
+    'bootstrap' => ['dumper'],
     'modules' => [
-        'var-dumper' => [
+        'dumper' => [
             'class' => 'Guanguans\YiiVarDumper\Module',
+            'host' => 'tcp://127.0.0.1:9916',
         ],
     ],
     'components' => [
