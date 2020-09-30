@@ -18,6 +18,7 @@ use Symfony\Component\VarDumper\Cloner\Data;
 use Symfony\Component\VarDumper\Server\DumpServer;
 use Yii;
 use yii\console\Controller;
+use yii\console\ExitCode;
 
 /**
  * Manages application Server.
@@ -45,6 +46,8 @@ class ServerController extends Controller
 
     /**
      * Runs guanguans/yii-var-dumper server.
+     *
+     * @return int
      */
     public function actionRun()
     {
@@ -68,6 +71,8 @@ class ServerController extends Controller
         $server->listen(function (Data $data, array $context, int $clientId) use ($descriptor, $io) {
             $descriptor->describe($io, $data, $context, $clientId);
         });
+
+        return ExitCode::OK;
     }
 
     /**
