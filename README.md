@@ -51,6 +51,14 @@ Config `config/main.php` file add:
 $ php yii dumper/server
 ```
 
+### You can set the output format to HTML using the --format option:
+
+``` bash
+$ php yii dumper/server --format=html > dump.html
+# or
+$ php yii dumper/server -f=html > dump.html
+```
+
 ### Dump your variate
 
 ``` php
