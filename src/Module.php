@@ -20,7 +20,7 @@ use Yii;
  */
 class Module extends \yii\base\Module
 {
-    public $version = '1.0.1';
+    public $version = '1.0.2';
 
     public $defaultRoute = 'web'; // 设置默认控制器
 
