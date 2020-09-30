@@ -14,7 +14,6 @@ use Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider;
 use Symfony\Component\VarDumper\Server\Connection;
 use Symfony\Component\VarDumper\VarDumper;
 use Yii;
-use yii\console\Application;
 
 /**
  * Class Module.
@@ -35,7 +34,7 @@ class Module extends \yii\base\Module
 
         require __DIR__.'/bootstrap.php';
 
-        if (Yii::$app instanceof Application) {
+        if (Yii::$app instanceof \yii\console\Application) {
             $this->controllerNamespace = 'Guanguans\YiiVarDumper\commands';
         }
 

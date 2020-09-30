@@ -35,6 +35,9 @@ class RequestContextProvider
      */
     private $cloner;
 
+    /**
+     * RequestContextProvider constructor.
+     */
     public function __construct(Request $currentRequest = null)
     {
         $this->currentRequest = $currentRequest;
@@ -46,6 +49,8 @@ class RequestContextProvider
      * Get the context.
      *
      * @return array|null
+     *
+     * @throws \yii\base\InvalidConfigException
      */
     public function getContext()
     {
@@ -60,8 +65,8 @@ class RequestContextProvider
         }
 
         return [
-            'uri' => $this->currentRequest->url,
-            'method' => $this->currentRequest->hostInfo,
+            'uri' => $this->currentRequest instanceof \yii\web\Request ? $this->currentRequest->getUrl() : implode(' ', Yii::$app->request->getParams()),
+            'method' => $this->currentRequest instanceof \yii\web\Request ? $this->currentRequest->getHostInfo() : basename($this->currentRequest->getScriptFile()),
             'controller' => $controller ? $this->cloner->cloneVar(get_class($controller)) : $this->cloner->cloneVar(null),
             'identifier' => spl_object_hash($this->currentRequest),
         ];
