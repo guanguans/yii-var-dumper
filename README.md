@@ -1,6 +1,6 @@
 # yii-var-dumper
 
-![usage](./doc/usage.gif)
+![usage](./docs/usage.gif)
 
 ![CI](https://github.com/guanguans/yii-var-dumper/workflows/CI/badge.svg)
 [![Build Status](https://travis-ci.org/guanguans/yii-var-dumper.svg?branch=master)](https://travis-ci.org/guanguans/yii-var-dumper)
@@ -68,9 +68,9 @@ dump($yourVariate);
 
 ### Output result
 
-![cli](./doc/cli.png)
+![cli](./docs/cli.png)
 
-![html](./doc/html.png)
+![html](./docs/html.png)
 
 ## Testing
 
