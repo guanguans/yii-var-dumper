@@ -66,7 +66,7 @@ $ php yii dumper/server -f=html > dump.html
 dump($yourVariate);
 ```
 
-### Result
+### Output result
 
 ![cli](./doc/cli.png)
 
