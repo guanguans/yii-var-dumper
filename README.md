@@ -23,7 +23,7 @@ $ composer require guanguans/yii-var-dumper --dev -v
 
 ## Configuration
 
-config file `config/main.php` add:
+Config `config/main.php` file add:
 
 ``` php
 ...
@@ -51,7 +51,7 @@ config file `config/main.php` add:
 $ php yii dumper/server
 ```
 
-### Dump your variable
+### Dump your variate
 
 ``` php
 <?php
