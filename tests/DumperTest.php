@@ -12,13 +12,22 @@ namespace Guanguans\Tests;
 
 class DumperTest extends TestCase
 {
+    protected $config;
+
     protected function setUp()
     {
         parent::setUp();
+
+        $this->config = require __DIR__.'/main.php';
     }
 
-    public function testToDo()
+    public function testModule()
     {
-        $this->assertIsString('To do testing.');
+        $this->assertTrue(\Yii::$app->hasModule('dumper'));
+    }
+
+    public function tearHost()
+    {
+        $this->assertSame($this->config['modules']['dumper']['host'], \Yii::$app->getModule('dumper')->host);
     }
 }
