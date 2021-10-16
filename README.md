@@ -2,7 +2,7 @@
 
 ![usage](./docs/usage.gif)
 
-![CI](https://github.com/guanguans/yii-var-dumper/workflows/CI/badge.svg)
+[![CI](https://github.com/guanguans/yii-var-dumper/actions/workflows/ci.yml/badge.svg)](https://github.com/guanguans/yii-var-dumper/actions/workflows/ci.yml)
 [![Build Status](https://travis-ci.org/guanguans/yii-var-dumper.svg?branch=master)](https://travis-ci.org/guanguans/yii-var-dumper)
 [![StyleCI](https://github.styleci.io/repos/299001049/shield?branch=master)](https://github.styleci.io/repos/299001049?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/guanguans/yii-var-dumper/v)](//packagist.org/packages/guanguans/yii-var-dumper)

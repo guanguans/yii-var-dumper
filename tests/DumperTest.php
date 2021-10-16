@@ -14,7 +14,7 @@ class DumperTest extends TestCase
 {
     protected $config;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
