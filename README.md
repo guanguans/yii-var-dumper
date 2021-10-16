@@ -9,7 +9,7 @@
 [![Total Downloads](https://poser.pugx.org/guanguans/yii-var-dumper/downloads)](//packagist.org/packages/guanguans/yii-var-dumper)
 [![License](https://poser.pugx.org/guanguans/yii-var-dumper/license)](//packagist.org/packages/guanguans/yii-var-dumper)
 
-> Bringing the [symfony/var-dumper](https://symfony.com/components/VarDumper) to Yii.
+> Bringing the [symfony/var-dumper](https://symfony.com/components/VarDumper) to Yii - 将 [symfony/var-dumper](https://symfony.com/components/VarDumper) 集成到 Yii。
 
 ## Requirement
 
@@ -17,7 +17,7 @@
 
 ## Installation
 
-``` bash
+```bash
 $ composer require guanguans/yii-var-dumper --dev -v
 ```
 
@@ -25,7 +25,7 @@ $ composer require guanguans/yii-var-dumper --dev -v
 
 Config `config/main.php` file add:
 
-``` php
+```php
 ...
 'bootstrap' => [
     ...
@@ -47,13 +47,13 @@ Config `config/main.php` file add:
 
 ### Run `dumper/server`
 
-``` bash
+```bash
 $ php yii dumper/server
 ```
 
 ### You can set the output format to HTML using the --format option:
 
-``` bash
+```bash
 $ php yii dumper/server --format=html > dump.html
 # or
 $ php yii dumper/server -f=html > dump.html
@@ -61,7 +61,7 @@ $ php yii dumper/server -f=html > dump.html
 
 ### Dump your variate
 
-``` php
+```php
 <?php
 dump($yourVariate);
 ```
@@ -74,7 +74,7 @@ dump($yourVariate);
 
 ## Testing
 
-``` bash
+```bash
 $ composer test
 ```
 
