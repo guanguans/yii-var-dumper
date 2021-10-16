@@ -30,11 +30,11 @@ class ServerController extends Controller
      */
     public $defaultAction = 'run';
 
+    public $format = 'cli';
+
     protected $argvInput;
 
     protected $consoleOutput;
-
-    public $format = 'cli';
 
     public function init()
     {
@@ -55,6 +55,8 @@ class ServerController extends Controller
             throw new InvalidArgumentException(sprintf('Unsupported format "%s".', $this->format));
         }
 
+        $this->format = ucfirst($this->format);
+
         $io = new SymfonyStyle($this->argvInput, $this->consoleOutput);
         $errorIo = $io->getErrorStyle();
         $errorIo->title('Yii Var Dump Server');
@@ -64,9 +66,9 @@ class ServerController extends Controller
         $errorIo->success(sprintf('Server listening on %s', $server->getHost()));
         $errorIo->comment('Quit the server with CONTROL-C.');
 
-        $descriptorName = sprintf('\Symfony\Component\VarDumper\Command\Descriptor\%sDescriptor', $this->format);
-        $dumperName = sprintf('\Symfony\Component\VarDumper\Dumper\%sDumper', $this->format);
-        $descriptor = new $descriptorName(new $dumperName());
+        $descriptorClassName = sprintf('\Symfony\Component\VarDumper\Command\Descriptor\%sDescriptor', $this->format);
+        $dumperClassName = sprintf('\Symfony\Component\VarDumper\Dumper\%sDumper', $this->format);
+        $descriptor = new $descriptorClassName(new $dumperClassName());
 
         $server->listen(function (Data $data, array $context, int $clientId) use ($descriptor, $io) {
             $descriptor->describe($io, $data, $context, $clientId);
